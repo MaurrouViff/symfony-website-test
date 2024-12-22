@@ -5,15 +5,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('') }}">
+    <link rel="stylesheet" href="{{ asset('styles/output.css') }}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
 <header>
-    <nav>
-        <ul>
-            <li>
-                <a href="{{  }}"></a>
+    <nav class="flex items-center justify-center min-h-16 bg-sky-400">
+        <ul class="flex items-center justify-between gap-3 tablet:gap-4 laptop:gap-6 desktop:gap-8">
+            <li class="list-none">
+                <a href="{{ path('app_index') }}" class="bg-white py-2 px-4 text-sm tablet:text-lg laptop:text-xl rounded outline outline-4 outline-offset-0 outline-fuchsia-400">Accueil</a>
+            </li>
+            <li class="list-none">
+                <a href="" class="bg-white py-2 px-4 text-sm tablet:text-lg laptop:text-xl rounded outline outline-4 outline-offset-0 outline-indigo-400">Contact</a>
+            </li>
+            <li class="list-none">
+                <a href="" class="bg-white py-2 px-4 text-sm tablet:text-lg laptop:text-xl rounded outline outline-4 outline-offset-0 outline-emerald-400">Magasin</a>
             </li>
         </ul>
     </nav>
