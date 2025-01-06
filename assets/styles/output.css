@@ -578,12 +578,20 @@ video {
   display: none;
 }
 
-.min-h-20 {
-  min-height: 5rem;
-}
-
 .min-h-16 {
   min-height: 4rem;
+}
+
+.min-h-9 {
+  min-height: 2.25rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .transform {
@@ -592,6 +600,10 @@ video {
 
 .list-none {
   list-style-type: none;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -606,14 +618,6 @@ video {
   justify-content: space-between;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
 .gap-3 {
   gap: 0.75rem;
 }
@@ -622,9 +626,9 @@ video {
   border-radius: 0.25rem;
 }
 
-.bg-red-800 {
+.bg-gray-300 {
   --tw-bg-opacity: 1;
-  background-color: rgb(153 27 27 / var(--tw-bg-opacity, 1));
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
 }
 
 .bg-sky-400 {
@@ -647,22 +651,31 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
-.outline {
-  outline-style: solid;
+.font-medium {
+  font-weight: 500;
 }
 
-.outline-2 {
-  outline-width: 2px;
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-red-400 {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity, 1));
+}
+
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity, 1));
+}
+
+.outline {
+  outline-style: solid;
 }
 
 .outline-4 {
@@ -673,12 +686,16 @@ video {
   outline-offset: 0px;
 }
 
-.outline-fuchsia-400 {
-  outline-color: #e879f9;
+.outline-amber-400 {
+  outline-color: #fbbf24;
 }
 
 .outline-emerald-400 {
   outline-color: #34d399;
+}
+
+.outline-fuchsia-400 {
+  outline-color: #e879f9;
 }
 
 .outline-indigo-400 {
@@ -702,11 +719,6 @@ video {
     gap: 1rem;
   }
 
-  .tablet\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
   .tablet\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -718,11 +730,6 @@ video {
     gap: 1.5rem;
   }
 
-  .laptop\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
   .laptop\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -732,15 +739,5 @@ video {
 @media (min-width: 1280px) {
   .desktop\:gap-8 {
     gap: 2rem;
-  }
-
-  .desktop\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
-  .desktop\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }

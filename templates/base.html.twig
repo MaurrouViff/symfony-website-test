@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('styles/output.css') }}">
     <title>{% block title %}{% endblock %}</title>
 </head>
-<body>
+<body class="flex flex-col">
 <header>
     <nav class="flex items-center justify-center min-h-16 bg-sky-400">
         <ul class="flex items-center justify-between gap-3 tablet:gap-4 laptop:gap-6 desktop:gap-8">
@@ -16,14 +16,25 @@
                 <a href="{{ path('app_index') }}" class="bg-white py-2 px-4 text-sm tablet:text-lg laptop:text-xl rounded outline outline-4 outline-offset-0 outline-fuchsia-400">Accueil</a>
             </li>
             <li class="list-none">
-                <a href="" class="bg-white py-2 px-4 text-sm tablet:text-lg laptop:text-xl rounded outline outline-4 outline-offset-0 outline-indigo-400">Contact</a>
+                <a href="{{ path('app_contact') }}" class="bg-white py-2 px-4 text-sm tablet:text-lg laptop:text-xl rounded outline outline-4 outline-offset-0 outline-indigo-400">Contact</a>
             </li>
             <li class="list-none">
-                <a href="" class="bg-white py-2 px-4 text-sm tablet:text-lg laptop:text-xl rounded outline outline-4 outline-offset-0 outline-emerald-400">Magasin</a>
+                <a href="{{ path('app_magasin') }}" class="bg-white py-2 px-4 text-sm tablet:text-lg laptop:text-xl rounded outline outline-4 outline-offset-0 outline-emerald-400">Magasin</a>
+            </li>
+            <li class="list-none">
+                <a href="{{ path('user_new') }}" class="bg-white py-2 px-4 text-sm tablet:text-lg laptop:text-xl rounded outline outline-4 outline-offset-0 outline-amber-400">Inscription</a>
+            </li>
+            <li class="list-none">
+                <a href="">Connexion</a>
             </li>
         </ul>
     </nav>
 </header>
+<div class="flex-grow">
 {% block body %}{% endblock %}
+</div>
+<footer class="flex items-center justify-center bg-sky-400 min-h-9">
+    <h2 class="text-red-400 font-medium">Site web codé avec amour par <span class="text-red-700 font-semibold">MaurrouViff</span></h2>
+</footer>
 </body>
 </html>
